@@ -1,0 +1,105 @@
+# 📡 ESP32 Ethernet Sensor Monitor
+
+Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 vía Ethernet, con salida HTTP/MQTT y visualización web.
+
+## 🔧 Características
+
+- ✅ Comunicación Ethernet confiable (ENC28J60)
+- 🌐 Servidor Web con interfaz en tiempo real
+- 📡 Envío de datos vía HTTP POST y MQTT
+- 🔁 Reconexión automática a red
+- ⚙️ Configuración de sensores (rango y unidad)
+- 📈 Filtro de media móvil para estabilidad
+- 🧩 Código modular y escalable
+
+---
+
+## 🗂 Estructura de Archivos
+
+```text
+├── src/
+│   ├── main.cpp              # Setup y loop principal
+│   ├── ethernet_manager.h    # Inicialización y monitoreo de red
+│   ├── webserver.h           # Interfaz web + API REST JSON
+│   ├── sensors.h             # Lectura ADC + filtro + unidades
+│   ├── config.h              # Configuración de sensores
+│   └── http-mqtt.h           # Envío por HTTP/MQTT
+```
+
+---
+
+## ⚙️ Requisitos
+
+- ESP32 Dev Board
+- ENC28J60 módulo Ethernet
+- Sensores con salida 0–3.3V
+- Fuente 5V 2A
+- Router/Switch con DHCP (o configuración manual)
+
+---
+
+## 🚀 Instalación
+
+1. Clona este repositorio o copia los archivos en PlatformIO / Arduino IDE
+2. Conecta tu ENC28J60 y sensores al ESP32
+3. Ajusta tu archivo `config.h` con los rangos/unidades
+4. Compila y sube
+5. Accede por navegador a `http://<IP ESP32>`
+
+---
+
+## 🧪 API REST
+
+**GET** `/api/sensores`
+
+```json
+{
+  "s1": 1.23,
+  "u1": "metros",
+  "s2": 25.3,
+  "u2": "grados_C",
+  "s3": 0.88,
+  "u3": "bar"
+}
+```
+
+---
+
+## 🔄 Comunicación MQTT / HTTP
+
+- HTTP: Se realiza POST a `http://<server>/api/sensores`
+- MQTT: Publica en `esp32/sensores`
+- Habilitar o deshabilitar en `http-mqtt.h`:
+  ```cpp
+  bool enviarPorHTTP = true;
+  bool enviarPorMQTT = false;
+  ```
+
+---
+
+## 🖥 Consola Serial
+
+Comandos disponibles:
+
+- `menu` → Muestra menú de opciones
+- `1` → Ver valores de sensores
+- `2` → Ver IP local
+- `3` → Activar/desactivar HTTP
+- `4` → Activar/desactivar MQTT
+
+---
+
+## ✨ Próximas mejoras
+
+- Configuración desde la interfaz web
+- Exportación de logs CSV / SD / SPIFFS
+- Soporte para sensores digitales (Modbus, I2C)
+- Interfaz gráfica externa (React, Grafana, etc.)
+
+---
+
+## 📜 Licencia
+
+MIT - Uso libre con atribución.
+
+Desarrollado por Adrián Calcumil 🚀
