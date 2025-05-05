@@ -1,5 +1,5 @@
 # 📡 ESP32 Ethernet Sensor Monitor
-
+ 
 Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 vía Ethernet, con salida HTTP/MQTT y visualización web.
 
 ## 🔧 Características
