@@ -14,9 +14,9 @@ struct SensorConfig {
   String unidad;
 };
 
-SensorConfig sensor1Cfg = {0.0, 3.3, 0.0, 10.0, "m"};
+SensorConfig sensor1Cfg = {0.0, 3.3, 0.0, 10.0, "bar"};
 SensorConfig sensor2Cfg = {0.0, 3.3, 0.0, 100.0, "%"};
-SensorConfig sensor3Cfg = {0.0, 3.3, 0.0, 5.0, "bar"};
+SensorConfig sensor3Cfg = {0.0, 3.3, 0.0, 5.0, "m"};
 
 void loadConfig() {
   if (!SPIFFS.begin(true)) {

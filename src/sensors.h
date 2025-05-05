@@ -64,10 +64,10 @@ void updateSensors() {
   voltage2 = filtro2;
   voltage3 = filtro3;
 
-  Serial.printf("[Filtrado] V1: %.2f V (%s), V2: %.2f V (%s), V3: %.2f V (%s)\n",
-                voltage1, sensor1Activo ? "activo" : "inactivo",
-                voltage2, sensor2Activo ? "activo" : "inactivo",
-                voltage3, sensor3Activo ? "activo" : "inactivo");
+//  Serial.printf("[Filtrado] V1: %.2f V (%s), V2: %.2f V (%s), V3: %.2f V (%s)\n",
+//                voltage1, sensor1Activo ? "activo" : "inactivo",
+//                voltage2, sensor2Activo ? "activo" : "inactivo",
+//                voltage3, sensor3Activo ? "activo" : "inactivo");
 }
 
 float convertToUnit(float voltage, SensorConfig cfg) {
