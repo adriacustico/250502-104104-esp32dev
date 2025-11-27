@@ -72,7 +72,7 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 ```cpp
   bool enviarPorHTTP = true;
   bool enviarPorMQTT = false;
-  ```
+```
 
 ---
 
