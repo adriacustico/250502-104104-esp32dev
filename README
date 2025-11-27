@@ -70,8 +70,8 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 - MQTT: Publica en `esp32/sensores`
 - Habilitar o deshabilitar en `http-mqtt.h`:
 ```cpp
-  bool enviarPorHTTP = true;
-  bool enviarPorMQTT = false;
+bool enviarPorHTTP = true;
+bool enviarPorMQTT = false;
 ```
 
 ---
