@@ -1,16 +1,16 @@
-# 📡 ESP32 Ethernet Sensor Monitor
+#  ESP32 Ethernet Sensor Monitor
  
 Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 vía Ethernet, con salida HTTP/MQTT y visualización web.
 
 ## 🔧 Características
 
-- ✅ Comunicación Ethernet confiable (ENC28J60)
-- 🌐 Servidor Web con interfaz en tiempo real
-- 📡 Envío de datos vía HTTP POST y MQTT
-- 🔁 Reconexión automática a red
-- ⚙️ Configuración de sensores (rango y unidad)
-- 📈 Filtro de media móvil para estabilidad
-- 🧩 Código modular y escalable
+-  Comunicación Ethernet confiable (ENC28J60)
+-  Servidor Web con interfaz en tiempo real
+-  Envío de datos vía HTTP POST y MQTT
+-  Reconexión automática a red
+-  Configuración de sensores (rango y unidad)
+-  Filtro de media móvil para estabilidad
+-  Código modular y escalable
 
 ---
 
@@ -28,7 +28,7 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 
 ---
 
-## ⚙️ Requisitos
+##  Requisitos
 
 - ESP32 Dev Board
 - ENC28J60 módulo Ethernet
@@ -38,7 +38,7 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 
 ---
 
-## 🚀 Instalación
+##  Instalación
 
 1. Clona este repositorio o copia los archivos en PlatformIO / Arduino IDE
 2. Conecta tu ENC28J60 y sensores al ESP32
@@ -48,7 +48,7 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 
 ---
 
-## 🧪 API REST
+##  API REST
 
 **GET** `/api/sensores`
 
@@ -65,19 +65,18 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 
 ---
 
-## 🔄 Comunicación MQTT / HTTP
-
+##  Comunicación MQTT / HTTP
 - HTTP: Se realiza POST a `http://<server>/api/sensores`
 - MQTT: Publica en `esp32/sensores`
 - Habilitar o deshabilitar en `http-mqtt.h`:
-  ```cpp
+```cpp
   bool enviarPorHTTP = true;
   bool enviarPorMQTT = false;
   ```
 
 ---
 
-## 🖥 Consola Serial
+##  Consola Serial
 
 Comandos disponibles:
 
@@ -89,7 +88,7 @@ Comandos disponibles:
 
 ---
 
-## ✨ Próximas mejoras
+##  Próximas mejoras
 
 - Configuración desde la interfaz web
 - Exportación de logs CSV / SD / SPIFFS
@@ -98,8 +97,3 @@ Comandos disponibles:
 
 ---
 
-## 📜 Licencia
-
-MIT - Uso libre con atribución.
-
-Desarrollado por Adrián Calcumil 🚀
