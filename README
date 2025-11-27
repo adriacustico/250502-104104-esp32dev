@@ -2,7 +2,7 @@
  
 Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 vía Ethernet, con salida HTTP/MQTT y visualización web.
 
-## 🔧 Características
+##  Características
 
 -  Comunicación Ethernet confiable (ENC28J60)
 -  Servidor Web con interfaz en tiempo real
@@ -14,7 +14,7 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
 
 ---
 
-## 🗂 Estructura de Archivos
+##  Estructura de Archivos
 
 ```text
 ├── src/
