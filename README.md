@@ -62,6 +62,14 @@ Proyecto modular para monitoreo de sensores analógicos usando ESP32 + ENC28J60 
   "u3": "bar"
 }
 ```
+##  Comunicación MQTT / HTTP
+- HTTP: Se realiza POST a `http://<server>/api/sensores`
+- MQTT: Publica en `esp32/sensores`
+- Habilitar o deshabilitar en `http-mqtt.h`:
+```cpp
+  bool enviarPorHTTP = true;
+  bool enviarPorMQTT = false;
+```
 
 
 ---
